@@ -7,3 +7,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Frontend (Next.js 16) — заметки для ИИ
+
+Общее руководство по проекту — [../AGENTS.md](../AGENTS.md). Прочитайте его первым.
+
+- `src/app/(shop)` — витрина (серверные компоненты, данные из `lib/api.ts`), `src/app/admin` — админка (клиентская, `lib/admin/client.ts`).
+- shadcn/ui на Base UI: проп `render` вместо `asChild`; не перезаписывайте `components/ui/button.tsx`.
+- Тексты не хардкодить — брать из настроек (`Settings` в `lib/types.ts`).
+- Проверка: `npx tsc --noEmit && npx eslint src` (сборка требует запущенного бэкенда).

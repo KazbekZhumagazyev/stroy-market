@@ -2,6 +2,8 @@
 
 Монорепозиторий: витрина и админка на **Next.js**, API и база на **Laravel + PostgreSQL**.
 
+> Для ИИ-агентов (Claude Code, Cursor, Codex…): руководство — [AGENTS.md](AGENTS.md).
+
 ```
 stroymarket-next/
 ├── backend/    Laravel 13 — REST API, PostgreSQL, Sanctum-токены, загрузка фото
@@ -10,29 +12,16 @@ stroymarket-next/
 
 Старая статическая версия — `/var/www/stroymarket` (там же исходный README с бизнес-правилами).
 
-## Запуск (разработка)
+## Запуск
 
 ```bash
-# 1. База (один раз)
-createdb ygm_shop
-
-# 2. Бэкенд → http://localhost:8010
-cd backend
-composer install
-cp .env.example .env && php artisan key:generate   # заполнить DB_*, ADMIN_*, REVALIDATE_SECRET
-php artisan migrate --seed
-php artisan storage:link
-php artisan serve --port=8010
-
-# 3. Фронтенд → http://localhost:3010, админка → http://localhost:3010/admin
-cd frontend
-npm install
-cp .env.example .env.local                          # REVALIDATE_SECRET — тот же, что в backend/.env
-npm run dev -- -p 3010
+./scripts/setup.sh   # один раз: зависимости, .env, база PostgreSQL, миграции, начальные данные
+./scripts/dev.sh     # API http://localhost:8010 + сайт http://localhost:3010 (админка /admin)
 ```
 
-Логин и пароль администратора задаются в `backend/.env` (`ADMIN_EMAIL`, `ADMIN_PASSWORD`) и создаются сидером.
-Пароль можно сменить в админке: «Настройки сайта» → внизу «Пароль администратора».
+Логин и пароль администратора — `ADMIN_EMAIL` / `ADMIN_PASSWORD` в `backend/.env` (пароль генерируется при установке).
+Сменить пароль можно в админке: «Настройки сайта» → внизу «Пароль администратора».
+Подробный сценарий, требования и ручные шаги — в [AGENTS.md](AGENTS.md).
 
 > `npm run build` фронтенда требует запущенного бэкенда — страницы берут данные из API.
 
