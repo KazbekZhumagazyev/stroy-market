@@ -1,0 +1,6 @@
+{
+    "(and :count more error)": "(и ещё :count ошибка)",
+    "(and :count more errors)": "(и ещё ошибок: :count)",
+    "Too Many Attempts.": "Слишком много попыток, попробуйте через минуту.",
+    "Unauthenticated.": "Требуется вход в админку."
+}

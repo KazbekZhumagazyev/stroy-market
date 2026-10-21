@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <clipPath id="ygm-mark"><rect width="64" height="64" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#ygm-mark)">
+    <rect width="64" height="64" fill="#111"/>
+    <rect y="57" width="64" height="7" fill="#E31E24"/>
+  </g>
+  <path d="M52 15.5H27Q17.5 15.5 17.5 25V35Q17.5 44.5 27 44.5H46.5V31" fill="none" stroke="#fff" stroke-width="11"/>
+  <rect x="32" y="26" width="20" height="10" fill="#E31E24"/>
+</svg>

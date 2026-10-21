@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'accepted' => 'Поле :attribute должно быть принято.',
+    'alpha_dash' => 'Поле :attribute может содержать только латинские буквы, цифры, дефис и подчёркивание.',
+    'array' => 'Поле :attribute должно быть списком.',
+    'between' => ['numeric' => 'Поле :attribute должно быть от :min до :max.', 'string' => 'Длина поля :attribute — от :min до :max символов.'],
+    'boolean' => 'Поле :attribute должно быть да/нет.',
+    'confirmed' => 'Поле :attribute не совпадает с подтверждением.',
+    'current_password' => 'Неверный текущий пароль.',
+    'date' => 'Поле :attribute должно быть датой.',
+    'distinct' => 'Поле :attribute содержит повторяющееся значение.',
+    'email' => 'Поле :attribute должно быть корректным e-mail.',
+    'exists' => 'Выбранное значение поля :attribute не найдено.',
+    'file' => 'Поле :attribute должно быть файлом.',
+    'image' => 'Файл :attribute должен быть изображением.',
+    'in' => 'Выбрано недопустимое значение поля :attribute.',
+    'integer' => 'Поле :attribute должно быть целым числом.',
+    'max' => ['numeric' => 'Поле :attribute не может быть больше :max.', 'file' => 'Файл :attribute не может быть больше :max КБ.', 'string' => 'Поле :attribute не может быть длиннее :max символов.', 'array' => 'В поле :attribute не может быть больше :max элементов.'],
+    'mimes' => 'Файл :attribute должен быть одного из типов: :values.',
+    'min' => ['numeric' => 'Поле :attribute должно быть не меньше :min.', 'string' => 'Поле :attribute должно быть не короче :min символов.', 'array' => 'В поле :attribute должно быть не меньше :min элементов.'],
+    'not_in' => 'Значение поля :attribute зарезервировано.',
+    'numeric' => 'Поле :attribute должно быть числом.',
+    'regex' => 'Поле :attribute имеет неверный формат.',
+    'required' => 'Заполните поле :attribute.',
+    'string' => 'Поле :attribute должно быть строкой.',
+    'unique' => 'Такое значение поля :attribute уже существует.',
+    'uploaded' => 'Не удалось загрузить :attribute.',
+
+    'attributes' => [
+        'name' => 'название', 'title' => 'заголовок', 'slug' => 'адрес (slug)', 'sku' => 'артикул', 'price' => 'цена', 'old_price' => 'старая цена',
+        'unit' => 'единица', 'stock' => 'остаток', 'category_id' => 'категория', 'brand_id' => 'бренд', 'text' => 'текст', 'rating' => 'рейтинг',
+        'email' => 'e-mail', 'password' => 'пароль', 'phone' => 'телефон', 'address' => 'адрес', 'file' => 'файл', 'color' => 'цвет', 'bg' => 'фон',
+        'icon' => 'иконка', 'specs.*.key' => 'характеристика', 'specs.*.value' => 'значение', 'sections.*.title' => 'заголовок блока',
+    ],
+];
